@@ -804,7 +804,7 @@ MonoBehaviour:
   checkSol: {fileID: 1375915260}
   Sol:
     serializedVersion: 2
-    m_Bits: 16383
+    m_Bits: 2147483647
 --- !u!1 &2065123243
 GameObject:
   m_ObjectHideFlags: 0

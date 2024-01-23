@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Testsaut : MonoBehaviour
+public class JumpFunction : MonoBehaviour
 {
     public Transform checkSol;
     bool toucheLeSol = false;
