@@ -27,6 +27,6 @@ public class JumpFunction : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 200));
         }
-
+        
     }
 }
