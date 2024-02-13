@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour 
 {
+    public GameObject menuPause;
+    public GameObject buttonPause;
+
     // Fonction pour changer de scène
     public void ChangeScene(string sceneName)
     {
@@ -20,5 +23,20 @@ public class MenuController : MonoBehaviour
             Application.Quit();
         #endif
     }
+
+    // Fonction pour fermer le menu pause
+    public void CloseMenu()
+    {
+        menuPause.SetActive(false);
+        buttonPause.SetActive(true);
+    }
+
+    // Fonction pour fermer le menu pause
+    public void OppenMenu()
+    {
+        menuPause.SetActive(true);
+        buttonPause.SetActive(false);
+    }
+
 }
 
