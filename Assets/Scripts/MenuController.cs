@@ -29,6 +29,7 @@ public class MenuController : MonoBehaviour
     {
         menuPause.SetActive(false);
         buttonPause.SetActive(true);
+        Time.timeScale = 1;
     }
 
     // Fonction pour fermer le menu pause
@@ -36,7 +37,7 @@ public class MenuController : MonoBehaviour
     {
         menuPause.SetActive(true);
         buttonPause.SetActive(false);
+        Time.timeScale = 0;
     }
-
 }
 
