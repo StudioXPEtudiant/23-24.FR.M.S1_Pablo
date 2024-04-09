@@ -8,6 +8,7 @@ public class JumpFunction : MonoBehaviour
     bool toucheLeSol = false;
     float rayonSol =0.3f;
     public LayerMask Sol;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class JumpFunction : MonoBehaviour
         if (toucheLeSol && Input.GetButtonDown ("Jump")) 
         {
             GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 325));
+            sound.Play ();
         }
 
     }

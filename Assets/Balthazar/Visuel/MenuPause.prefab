@@ -545,7 +545,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPause: {fileID: 4242275185101700927}
-  buttonPause: {fileID: 0}
+  buttonPause: {fileID: 2071412073786500514, guid: 6aeed037f9c18854188bfff080299758, type: 3}
+  changeSceneSound: {fileID: 0}
+  closeMenuSound: {fileID: 0}
+  oppenSceneSound: {fileID: 0}
 --- !u!1 &4242275185449293391
 GameObject:
   m_ObjectHideFlags: 0

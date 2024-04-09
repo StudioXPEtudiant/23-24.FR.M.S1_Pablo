@@ -8,6 +8,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float Speed = 4.5f;
+    public AudioSource fireSound;
     public int Damages_Ennemy = 1;
     private int Damage_ice = 1;
     private void Update()
@@ -20,6 +21,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.layer != 14)
         {
             Destroy(gameObject);
+            fireSound.Play();
         }
         /*else if(collision.gameObject.layer == 15)
         {
