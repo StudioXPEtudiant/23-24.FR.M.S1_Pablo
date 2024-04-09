@@ -25,8 +25,8 @@ public class JumpFunction : MonoBehaviour
     {
         if (toucheLeSol && Input.GetButtonDown ("Jump")) 
         {
-            GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 200));
+            GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 325));
         }
-        
+
     }
 }
