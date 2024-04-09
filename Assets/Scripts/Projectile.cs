@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public AudioSource fireSound;
     public int Damages_Ennemy = 1;
     private int Damage_ice = 1;
+    
     private void Update()
     {
         transform.position += -transform.right * Time.deltaTime * Speed;
