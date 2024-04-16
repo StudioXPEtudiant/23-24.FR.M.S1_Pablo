@@ -4,12 +4,8 @@ public class WeakSpot : MonoBehaviour
 {
     public GameObject ObjectDestroy;
 
-   private void OnTriggerEnter2D(Collider2D collision)
+    public void detruire()
     {
-
-        if (collision.CompareTag("Player"))
-        {
-            Destroy(ObjectDestroy);
-        }
+        Destroy(ObjectDestroy);
     }
 }

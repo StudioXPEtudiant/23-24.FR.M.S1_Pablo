@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 5582109492712259442}
   - component: {fileID: 5582109492712259405}
   - component: {fileID: 5582109492712259404}
+  - component: {fileID: 8904162976904448656}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -298,6 +299,7 @@ Transform:
   - {fileID: 5582109492886317764}
   - {fileID: 5582109492248886401}
   - {fileID: 5582109494161670019}
+  - {fileID: 8619069670224517434}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -361,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!114 &5582109492712259446
 MonoBehaviour:
@@ -441,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 400728149625174005, guid: cd5352f3c2d64d847adadfba81001b19, type: 3}
   LaunchOffSet: {fileID: 5582109494161670019}
+  cooldown: 0
 --- !u!114 &5582109492712259404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65854ef6786d1064992e21df6c71602d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
+  player: {fileID: 0}
+  gameOverCamera: {fileID: 0}
+  healthManager: {fileID: 0}
+  buttonPause: {fileID: 0}
   maxHealth: 100
   currentHealth: 0
   invicibilityTimeAfterHit: 3
@@ -460,6 +468,21 @@ MonoBehaviour:
   isInvincible: 0
   graphics: {fileID: 5582109493398630030}
   healthBar: {fileID: 0}
+--- !u!114 &8904162976904448656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582109492712259451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d059732bbea09e49a86ddfc26c9739d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceBlockPrefab: {fileID: 7187488234481901753, guid: e3bef356f17d8044e991e1a04dbf4ba9, type: 3}
+  LaunchOffSet: {fileID: 8619069670224517434}
+  count: 0
 --- !u!1 &5582109492886317771
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,4 +681,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5582109492712259444}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8342107848938796531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8619069670224517434}
+  m_Layer: 14
+  m_Name: IceBlockCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8619069670224517434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342107848938796531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.621, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5582109492712259444}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
