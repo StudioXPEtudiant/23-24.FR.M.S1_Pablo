@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ennemy: {fileID: 8364162668002712540}
+  killSound: {fileID: 0}
 --- !u!61 &9007247875919533345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 8364162667697189903}
   - {fileID: 8364162668294708872}
-  damageOnCollison: 20
+  damageOnCollison: 10
   grafics: {fileID: 5106936918052201310}
 --- !u!212 &5106936918052201310 stripped
 SpriteRenderer:

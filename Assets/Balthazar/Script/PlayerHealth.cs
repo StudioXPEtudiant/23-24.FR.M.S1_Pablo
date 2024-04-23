@@ -13,7 +13,6 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-
     public float invicibilityTimeAfterHit = 3f;
     public float invicibilityFlashDelay = 0.2f;
     public bool isInvincible = false;
@@ -37,6 +36,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+
+
         if (!isInvincible)
         {
             currentHealth -= damage;
@@ -76,4 +77,11 @@ public class PlayerHealth : MonoBehaviour
         isInvincible = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Potion"))
+        {
+            TakeDamage(-50);
+        }
+    }
 }

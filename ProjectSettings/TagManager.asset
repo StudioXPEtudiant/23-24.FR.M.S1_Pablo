@@ -12,6 +12,7 @@ TagManager:
   - Ghost
   - Ennemy
   - Bullet
+  - Potion
   layers:
   - Default
   - TransparentFX
