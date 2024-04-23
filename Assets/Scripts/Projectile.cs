@@ -8,7 +8,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float Speed = 4.5f;
-    public AudioSource fireSound;
     public int Damages_Ennemy = 1;
     private int Damage_ice = 1;
     
@@ -17,22 +16,5 @@ public class Projectile : MonoBehaviour
         transform.position += -transform.right * Time.deltaTime * Speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer != 14)
-        {
-            Destroy(gameObject);
-            fireSound.Play();
-        }
-        /*else if(collision.gameObject.layer == 15)
-        {
-            hp=collision.gameObject.GetComponent<Health>();
-            hp.decrease(Damages_Ennemy);
-        }
-        else if(collision.gameObject.layer == 16)
-        {
-            hp=collision.gameObject.GetComponent<Health>();
-            hp.decrease(Damage_Ice);
-        }*/
-    }
+
 }    
