@@ -1,71 +1,49 @@
 using UnityEngine;
-using System.Collections;
 
-public class PlayerSpriteFlip : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public float moveSpeed = 5f; // Vitesse de déplacement du joueur
+    private Rigidbody2D rb;
+    private Transform spriteTransform; // Transform de l'objet enfant contenant le sprite
+    private SpriteRenderer spriteRenderer;
 
-//public Vector2 forceSaut = new Vector3(500,500,0);
+    // Start est appelé avant la première frame de mise à jour
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        spriteTransform = transform.Find("Sprite"); // Trouver l'objet enfant nommé "Sprite"
+        if (spriteTransform != null)
+        {
+            spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
+        }
+        else
+        {
+            Debug.LogError("Sprite Renderer not found. Make sure there is an object named 'Sprite' attached as a child.");
+        }
+    }
 
-private Rigidbody2D rb;
-private bool facingRight = true;
-private bool facingUp = true;
-private Transform groundCheck;
-private bool grounded = false;
+    // Update est appelé une fois par frame
+    void Update()
+    {
+        // Déplacement horizontal
+        float moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-public float moveForce = 0.1f;
-
-
-
-
-void Start()
-{
-//Debug.Log("Affichage scripts-start-personnage principale");
-rb = GetComponent<Rigidbody2D>();
-}
-// Update is called once per frame
-void Update()
-{
-
-}
-
-void FixedUpdate()
-{
-//déplacent horizontal
-float h = Input.GetAxis("Horizontal");
-transform.Translate(Vector2.right*h * moveForce );
-rb.AddForce(Vector2.right * h * moveForce);
-
-if (h > 0 && !facingRight)
-FlipX();
-else if (h < 0 && facingRight)
-FlipX();
-
-//déplacement vertical
-float g = Input.GetAxis("Vertical");
-rb.AddForce(Vector2.up * g * moveForce);
-transform.Translate(Vector2.up*g*moveForce);
-
-if (g > 0 && !facingUp)
-FlipY();
-else if (g < 0 && facingUp)
-FlipY();
-
+        // Retourner le sprite du joueur en fonction de sa direction de déplacement
+        if (moveInput > 0) // Si le joueur se déplace vers la droite
+        {
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = true; // Retourner le sprite
+            }
+        }
+        else if (moveInput < 0) // Si le joueur se déplace vers la gauche
+        {
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = false; // Ne pas retourner le sprite
+            }
+        }
+    }
 }
 
-void FlipX()
-{ Vector3 theScale = transform.localScale;
-
-facingRight = !facingRight;
-theScale.x *= -1;
-transform.localScale = theScale;
-}
-
-void FlipY()
-{ Vector3 theScale = transform.localScale;
-
-facingUp = !facingUp;
-theScale.y *= -1;
-transform.localScale = theScale;
-}
-
-}
