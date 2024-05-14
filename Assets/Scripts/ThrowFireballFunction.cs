@@ -24,7 +24,6 @@ public class ThrowFireballFunction : MonoBehaviour
         {
             currentTime=cooldown;
             Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);
-            Debug.Log("Fire");
         }
         
     }

@@ -10,6 +10,8 @@ TagManager:
   - CoreTerrain
   - Object
   - Ghost
+  - Ennemy
+  - Fire
   layers:
   - Default
   - TransparentFX
