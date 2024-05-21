@@ -1,31 +1,31 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class IceBlock : MonoBehaviour
 {
     public float time;
-    public GameObject ObjectDestroy;
-    private float incrementAmount = 1;
+    public GameObject Player;
     private float compteur = 0;
+    private CreateIceBlock createIceBlockScript;
 
-    private void Start()
+    public void SetCreateIceBlockScript(CreateIceBlock script)
     {
-        InvokeRepeating("Increment", 1, 1);
+        createIceBlockScript = script;
     }
+
     private void Update()
     {
-        if (compteur==time)
+        compteur += Time.deltaTime;
+        if (compteur >= time)
         {
-            Destroy(ObjectDestroy);
+            compteur = 0;
+            if (createIceBlockScript != null)
+            {
+                createIceBlockScript.Decrement();
+            }
+            Destroy(gameObject); // Détruire ce GameObject
         }
     }
+}
 
-    private void Increment()
-    {
-        compteur += incrementAmount;
-    }
-}    
