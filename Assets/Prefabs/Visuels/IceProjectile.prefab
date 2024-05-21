@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6918712249213421730}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 6514435637820686292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!58 &507515902240313565
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -87,8 +87,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   Damages_Ennemy: 1
-  Damage_ice: 1
-  Damage_player: 1
 --- !u!82 &-5433590628827812706
 AudioSource:
   m_ObjectHideFlags: 0
