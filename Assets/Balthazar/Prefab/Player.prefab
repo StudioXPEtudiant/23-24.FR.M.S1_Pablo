@@ -45,7 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 38dfa516d83ebff4fac6960ca006fb43, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -429,6 +429,7 @@ MonoBehaviour:
   Sol:
     serializedVersion: 2
     m_Bits: 16383
+  sound: {fileID: 0}
 --- !u!114 &5582109492712259405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,9 +442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a78768d69c7e08409a3526b90a94851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 400728149625174005, guid: cd5352f3c2d64d847adadfba81001b19, type: 3}
+  ProjectilePrefab: {fileID: 400728149625174005, guid: 959fbe514824126408c9b6c6a230e109, type: 3}
   LaunchOffSet: {fileID: 5582109494161670019}
-  cooldown: 0
+  Auto: 0
+  cooldown: 1
 --- !u!114 &5582109492712259404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 5582109492712259451}
   gameOverCamera: {fileID: 0}
   healthManager: {fileID: 0}
   buttonPause: {fileID: 0}
@@ -482,7 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IceBlockPrefab: {fileID: 7187488234481901753, guid: e3bef356f17d8044e991e1a04dbf4ba9, type: 3}
   LaunchOffSet: {fileID: 8619069670224517434}
-  count: 0
+  max: 2
 --- !u!1 &5582109492886317771
 GameObject:
   m_ObjectHideFlags: 0
