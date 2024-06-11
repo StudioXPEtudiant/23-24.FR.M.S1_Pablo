@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public float Speed = 4.5f;
     public float Damages_Ennemy = 1;
     public float Damage_ice = 1;
-    public float Damage_player=1:
+    public float Damage_player=1;
     private float destroyTime = 20;
     
     private void Update()
