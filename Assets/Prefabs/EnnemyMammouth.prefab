@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectDestroy: {fileID: 7799803470473999860}
+  killSound: {fileID: 0}
 --- !u!114 &9172175352090398992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,10 +91,10 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 97510309298900807}
-        m_TargetAssemblyTypeName: WeakSpot, Assembly-CSharp
-        m_MethodName: detruire
-        m_Mode: 1
+      - m_Target: {fileID: 7799803470473999860}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

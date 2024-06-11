@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectDestroy: {fileID: 5922862345522396929}
+  killSound: {fileID: 0}
 --- !u!114 &8052188686946790786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,10 +91,10 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6904050534666299388}
-        m_TargetAssemblyTypeName: WeakSpot, Assembly-CSharp
-        m_MethodName: detruire
-        m_Mode: 1
+      - m_Target: {fileID: 5922862345522396929}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -305,7 +306,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 3.857089, y: 0.8458402}

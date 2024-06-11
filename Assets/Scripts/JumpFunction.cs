@@ -5,6 +5,7 @@ using UnityEngine;
 public class JumpFunction : MonoBehaviour
 {
     public Transform checkSol;
+    public float force;
     bool toucheLeSol = false;
     float rayonSol =0.3f;
     public LayerMask Sol;
@@ -26,7 +27,7 @@ public class JumpFunction : MonoBehaviour
     {
         if (toucheLeSol && Input.GetButtonDown ("Jump")) 
         {
-            GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, 325));
+            GetComponent<Rigidbody2D>().AddForce (new Vector2 (0, force));
             sound.Play ();
         }
 

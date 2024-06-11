@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectDestroy: {fileID: 4988635442058315480}
+  killSound: {fileID: 0}
 --- !u!114 &3437979031795325075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,10 +91,10 @@ MonoBehaviour:
   OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5038737726917743282}
-        m_TargetAssemblyTypeName: WeakSpot, Assembly-CSharp
-        m_MethodName: detruire
-        m_Mode: 1
+      - m_Target: {fileID: 4988635442058315480}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -129,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988635440227204190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2830925, y: -2.4448197, z: 4079.6165}
+  m_LocalPosition: {x: -8.2830925, y: -2.4448197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -160,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988635440348896699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7169085, y: -2.4448197, z: 4079.6165}
+  m_LocalPosition: {x: 3.7169085, y: -2.4448197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988635441168481083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5130916, y: -2.4448197, z: 4082.269}
+  m_LocalPosition: {x: -1.5130916, y: -2.4448197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -240,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988635442058315480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9869084, y: 0.14481974, z: -4079.6165}
+  m_LocalPosition: {x: -1.9869084, y: 0.14481974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -271,7 +272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1486476162443287242, guid: 30ac4a8da5441e3449769691898930b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.652569
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1486476162443287242, guid: 30ac4a8da5441e3449769691898930b2, type: 3}
       propertyPath: m_LocalRotation.w

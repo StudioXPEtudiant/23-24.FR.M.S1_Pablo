@@ -81,6 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 400728149625174005, guid: 8d9d3174f52a7e443b94fc297c738717, type: 3}
   LaunchOffSet: {fileID: 7470059165045775306}
+  Auto: 1
   cooldown: 3
 --- !u!114 &5626881110080458453
 MonoBehaviour:
