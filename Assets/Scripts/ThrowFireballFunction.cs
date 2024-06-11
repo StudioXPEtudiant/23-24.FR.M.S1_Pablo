@@ -7,9 +7,12 @@ public class ThrowFireballFunction : MonoBehaviour
 {
     public Projectile ProjectilePrefab;
     public Transform LaunchOffSet;
-
+    
+    [SerializeField]
+    public bool Auto;
     public float cooldown;
     private float currentTime=0;
+    
 
     // Start is called before the first frame update
 
@@ -20,7 +23,12 @@ public class ThrowFireballFunction : MonoBehaviour
         {
             currentTime-=Time.deltaTime;
         }
-        if (Input.GetButtonDown ("Fire") && currentTime <= 0)
+        if (Auto && currentTime <= 0)
+        {
+            currentTime=cooldown;
+            Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);
+        }
+        else if (Input.GetButtonDown ("Fire") && currentTime <= 0)
         {
             currentTime=cooldown;
             Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2912227273767803548}
   - component: {fileID: 6300220126157376263}
   - component: {fileID: 3888745055252082771}
+  - component: {fileID: -8936043385160822595}
   m_Layer: 0
   m_Name: IceBlock
   m_TagString: Untagged
@@ -132,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 5
   ObjectDestroy: {fileID: 7187488234481901753}
+  Player: {fileID: 5582109492712259451, guid: d062aba441567664898bc49508f27849, type: 3}
 --- !u!61 &3888745055252082771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158,3 +160,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5648236, y: 2.573743}
   m_EdgeRadius: 0
+--- !u!50 &-8936043385160822595
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7187488234481901753}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
